@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Essenza - Home Spa</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    var players = new Array(),
+      playerInfoList = [];
+  </script>
+</head>
+<body>
+  <header class="Header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-3">
+          <h1 class="Header__logo">
+            <a href="" class="d-block">
+              <img src="images/logo.png" alt="Essenza Home Spa" class="img-fluid" />
+            </a>
+          </h1>
+        </div>
+        <div class="col-lg-9">
+          <nav class="Header__nav">
+            <ul class="Header__mainMenu">
+              <li class="active"><a href="#">Home Spa</a></li>
+              <li><a href="#">Cómo funciona</a></li>
+              <li><a href="#">Servicios</a></li>
+              <li><a href="#">Testimonios</a></li>
+              <li><a href="#">Iniciar sesión</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="Page">
+    <div class="container">
+      <h3 class="Page__subtitle text-center text-uppercase">Home Spa</h3>
+      <h2 class="Page__title text-center">La esencia de estar bien</h2>
+
+      <section class="Box Box--50">
+        <article class="Box__item">
+          <figure class="Box__figure"><i class="icon-folder-open-o"></i></figure>
+          <div class="Box__info">
+            <h3 class="Box__title">Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolores, commodi, quos neque nam inventore.</p>
+          </div>
+        </article>
+        <article class="Box__item">
+          <figure class="Box__figure"><i class="icon-alarm"></i></figure>
+          <div class="Box__info">
+            <h3 class="Box__title">Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate inventore alias blanditiis placeat expedita incidunt libero beatae atque praesentium repudiandae iusto, eaque, nemo, totam nam!</p>
+          </div>
+        </article>
+        <article class="Box__item">
+          <figure class="Box__figure"><i class="icon-sitemap"></i></figure>
+          <div class="Box__info">
+            <h3 class="Box__title">Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat vero sed nemo laudantium, iste inventore!</p>
+          </div>
+        </article>
+        <article class="Box__item">
+          <figure class="Box__figure"><i class="icon-user"></i></figure>
+          <div class="Box__info">
+            <h3 class="Box__title">Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam odio suscipit illum omnis, officia veritatis eveniet mollitia aut!</p>
+          </div>
+        </article>
+      </section>
+
+      <hr>
+    </div>
+  </section>
+
+  <section class="Page">
+    <div class="container">
+      <article class="Page__videoWrapper">
+        <figure class="Page__video embed-responsive embed-responsive-16by9">
+          <div class="embed-responsive-item" id="player-1"></div>
+          <script>
+            var height = '360',
+                width = '640';
+
+            playerInfoList.push({
+              id: '1',
+              idPlayer: 'player-1',
+              height: height,
+              width: width,
+              videoId: 'QAJTVdWPuec'
+            })
+          </script>
+        </figure>
+        <div class="Page__video__caption">
+          <h3 class="Page__subtitle text-uppercase">Cómo funciona</h3>
+          <p class="Page__text Page__text--resalt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="Page Page__register">
+    <figure class="Page__bgRegister">
+      <h3 class="Page__bgRegister__title text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur.</h3>
+      <h4 class="Page__bgRegister__subtitle text-white text-uppercase">Regístrate es gratis.</h4>
+    </figure>
+    <article class="Page__formRegister">
+      <h3 class="Page__subtitle text-white text-right text-uppercase">Reserva ahora</h3>
+      <h2 class="Page__formRegister__title text-white text-uppercase">Regístrate ahora</h2>
+      <form action="#" class="Form">
+        <div class="form-group">
+          <label for="email" class="sr-only">Correo electrónico</label>
+          <input type="text" class="form-control Form__control" name="email" placeholder="Correo electrónico" />
+        </div>
+        <div class="form-group">
+          <label for="password" class="sr-only">Contraseña</label>
+          <input type="password" class="form-control Form__control" name="password" placeholder="Contraseña" />
+        </div>
+        <div class="form-group Form__button">
+          <button type="submit" class="Button Button--firstAlt text-uppercase">Crear cuenta</button>
+        </div>
+      </form>
+    </article>
+  </section>
+
+  <section class="Page">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <h3 class="Page__subtitle text-center text-uppercase">Servicios y promociones</h3>
+          <nav class="Navigation Navigation--radius">
+            <ul class="Navigation__list">
+              <li class="active"><button type="button">Engriete</button></li>
+              <li><button type="button">Paquetes</button></li>
+            </ul>
+          </nav>
+          <h2 class="Page__service__title"><span>1.</span> Elige el servicio que deseas solicitar</h2>
+          <p>Hay más de una manera de resaltar tu belleza y obtener ese look que tanto buscas.</p>
+        </div>
+        <div class="col-lg-9">
+          <section class="Services">
+            <article class="Services__item">
+              <figure class="Service__figure">
+                <img src="images/corte-painado.jpg" alt="Corte y Peinado" class="img-fluid" />
+                <div class="Service__info">
+                  <h3 class="Service__title">Corte & <span>Peinado</span></h3>
+                  <button class="Service__link text-uppercase">Solicitar ></button>
+                </div>
+              </figure>
+            </article>
+            <article class="Services__item">
+              <figure class="Service__figure">
+                <img src="images/piel-masajes.jpg" alt="Corte y Peinado" class="img-fluid" />
+                <div class="Service__info">
+                  <h3 class="Service__title">Piel & <span>Masajes</span></h3>
+                  <button class="Service__link text-uppercase">Solicitar ></button>
+                </div>
+              </figure>
+            </article>
+            <article class="Services__item">
+              <figure class="Service__figure">
+                <img src="images/facial-maquillaje.jpg" alt="Corte y Peinado" class="img-fluid" />
+                <div class="Service__info">
+                  <h3 class="Service__title">Facial & <span>Maquillahe</span></h3>
+                  <button class="Service__link text-uppercase">Solicitar ></button>
+                </div>
+              </figure>
+            </article>
+            <article class="Services__item">
+              <figure class="Service__figure">
+                <img src="images/manicure-pedicure.jpg" alt="Corte y Peinado" class="img-fluid" />
+                <div class="Service__info">
+                  <h3 class="Service__title">Manicure & <span>Pedicure</span></h3>
+                  <button class="Service__link text-uppercase">Solicitar ></button>
+                </div>
+              </figure>
+            </article>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <aside class="Prefooter">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3 class="Prefooter__title text-white">A wonderful serenity has taken possession of my entire soul <button class="ml-5 Button Button--white text-uppercase">Regístrate</button></h3>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <footer class="Footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-3">
+          <h2 class="Footer__logo">
+            <img src="images/logo-white.png" alt="Essenza Home Spa" class="img-fluid" />
+          </h2>
+        </div>
+        <div class="col-lg-9">
+          <nav class="Footer__nav">
+            <ul class="Footer__footerMenu">
+              <li class="active"><a href="#">Home Spa</a></li>
+              <li><a href="#">Cómo funciona</a></li>
+              <li><a href="#">Servicios</a></li>
+              <li><a href="#">Testimonios</a></li>
+              <li><a href="#">Iniciar sesión</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="js/min/bundle.js"></script>
+  <script type="text/javascript" src="js/youtube.js"></script>
+</body>
+</html>

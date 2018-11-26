@@ -1,0 +1,33 @@
+.Box {
+  display: flex;
+  margin: 6rem 0;
+  &--50 {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .Box__item {
+      width: 46%;
+    }
+  }
+}
+.Box__item {
+  align-items: center;
+  display: flex;
+  margin-bottom: 3rem;
+}
+.Box__figure {
+  margin-right: 2rem;
+  text-align: center;
+  width: 30%;
+  i[class^=icon-] {
+    border: 1px solid $firstColor;
+    border-radius: 50%;
+    color: $accentColor;
+    font-size: 3rem;
+    padding: 2rem;
+  }
+}
+.Box__title {
+  color: $accentColorAlt;
+  font-family: "Panton-Bold";
+  font-size: 1rem
+}

@@ -1,0 +1,38 @@
+.Navigation {
+  display: flex;
+  margin: 2.5rem 0;
+  &--radius {
+    border: 1px solid $borderColor;
+    border-radius: 3rem;
+    padding: .3rem;
+  }
+}
+.Navigation__list {
+  display: flex;
+  margin-bottom: 0;
+  padding-left: 0;
+  width: 100%;
+  li {
+    background-color: transparent;
+    border-radius: 3rem;
+    flex: 1 0 auto;
+    list-style: none;
+    padding: .5rem 0;
+    text-align: center;
+    transition: background-color .3s ease-out, color .2s ease;
+    &.active, &:hover {
+      background-color: $thirdColor;
+      button {
+        color: white;
+      }
+    }
+    button {
+      background-color: transparent;
+      border: none;
+      color: #aaa;
+      cursor: pointer;
+      font-family: $pantonBold;
+      font-size: .875rem;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.Page {
+  padding: 6rem 0;
+  &--full {
+    min-height: 100vh;
+  }
+}
+.Page__subtitle {
+  color: $firstColor;
+  font-family: "Panton-Bold";
+  font-size: 1rem;
+}
+.Page__title {
+  color: $headingColor;
+  font-family: "Panton-ExtraLight";
+  font-size: 2.75rem;
+}
+.Page__videoWrapper {
+  position: relative;
+}
+.Page__video {
+  width: 80%;
+}
+.Page__video__caption {
+  background-color: #fff;
+  padding: 2.5rem;
+  position: absolute;
+  top: 15%;
+  right: 0;
+  width: 35%;
+}
+.Page__text {
+  &--resalt {
+    font-family: $pantonExtraLight;
+    font-size: 2.5rem;
+    line-height: 1.3;
+  }
+}
+.Page__register {
+  display: flex;
+}
+.Page__bgRegister {
+  align-content: center;
+  background: transparent url('./../images/bgRegister.jpg') 0 0 no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 0;
+  width: 60%;
+}
+.Page__bgRegister__title {
+  font-size: 2.75rem;
+  width: 80%;
+}
+.Page__bgRegister__subtitle {
+  font-family: $pantonBold;
+  font-size: 1.5rem;
+  width: 80%;
+}
+.Page__formRegister {
+  background-color: $thirdColor;
+  padding: 5rem 10% 5rem 5rem;
+  width: 40%;
+}
+.Page__formRegister__title {
+  font-family: $pantonBold;
+  font-size: 1.75rem;
+  &::after {
+    background-color: white;
+    content: "";
+    display: block;
+    height: 3px;
+    width: 90px;
+  }
+}
+.Page__service__title {
+  font-family: $pantonExtraLight;
+  font-size: 2rem;
+  span {
+    color: $firstColor;
+    font-family: $pantonBold;
+  }
+}

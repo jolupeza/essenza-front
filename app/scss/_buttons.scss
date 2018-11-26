@@ -1,0 +1,26 @@
+.Button {
+  border: none;
+  border-radius: .3rem;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $pantonBold;
+  font-size: 1rem;
+  padding: 1rem 2.5rem;
+  transition: background-color .3s ease, color .2s ease-out;
+  &--white {
+    background-color: white;
+    color: $firstColor;
+    &:hover {
+      background-color: $firstColorAlt;
+      color: white;
+    }
+  }
+  &--firstAlt {
+    background-color: $firstColorAlt;
+    color: white;
+    &:hover {
+      background-color: $accentColorAlt;
+      color: white;
+    }
+  }
+}

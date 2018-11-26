@@ -1,0 +1,52 @@
+.Footer {
+  background-color: $darkColor;
+  padding: 2rem 0;
+}
+.Footer__logo {
+  margin-bottom: 0;
+}
+.Footer__nav {
+  display: flex;
+}
+.Footer__footerMenu {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0;
+  padding-left: 0;
+  width: 100%;
+  li {
+    font-size: .875rem;
+    list-style: none;
+    padding: 0 1.5rem;
+    text-transform: uppercase;
+    &.active {
+      a {
+        &::after {
+          background-color: $firstColor;
+        }
+      }
+    }
+    a {
+      color: white;
+      &:focus, &:hover {
+        &::after {
+          background-color: $firstColor;
+        }
+      }
+      &::after {
+        background-color: transparent;
+        content: "";
+        display: block;
+        height: 3px;
+        transition: background-color .3s ease-out;
+        width: 30px;
+      }
+    }
+  }
+}
+.Prefooter {
+  background-color: $firstColor;
+  padding: 2rem 0;
+}
+.Prefooter__title {
+}

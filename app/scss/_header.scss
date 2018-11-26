@@ -1,0 +1,44 @@
+.Header {
+  padding: 2rem 0;
+  position: absolute;
+  width: 100%;
+}
+.Header__nav {
+  display: flex;
+}
+.Header__mainMenu {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0;
+  padding-left: 0;
+  width: 100%;
+  li {
+    font-size: .875rem;
+    list-style: none;
+    padding: 0 1.5rem;
+    text-transform: uppercase;
+    &.active {
+      a {
+        &::after {
+          background-color: $firstColor;
+        }
+      }
+    }
+    a {
+      color: $headingColor;
+      &:focus, &:hover {
+        &::after {
+          background-color: $firstColor;
+        }
+      }
+      &::after {
+        background-color: transparent;
+        content: "";
+        display: block;
+        height: 3px;
+        transition: background-color .3s ease-out;
+        width: 30px;
+      }
+    }
+  }
+}
