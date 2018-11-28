@@ -24,11 +24,15 @@
         <div class="col-lg-9">
           <nav class="Header__nav">
             <ul class="Header__mainMenu">
-              <li class="active"><a href="#">Home Spa</a></li>
-              <li><a href="#">Cómo funciona</a></li>
-              <li><a href="#">Servicios</a></li>
-              <li><a href="#">Testimonios</a></li>
-              <li><a href="#">Iniciar sesión</a></li>
+              <li class="active">
+                <a href="#home-spa">Home Spa</a>
+              </li>
+              <li>
+                <a href="#como-funciona">Cómo funciona</a>
+              </li>
+              <li><a href="#iniciar-sesion">Iniciar sesión</a></li>
+              <li><a href="#servicios">Servicios</a></li>
+              <!-- <li><a href="#">Testimonios</a></li> -->
             </ul>
           </nav>
         </div>
@@ -36,7 +40,23 @@
     </div>
   </header>
 
-  <section class="Page">
+  <div id="carouselHome" class="carousel slide Carousel Carousel--home" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="img-fluid" src="images/slider01.png" alt="First slide" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Lorem ipsum</h5>
+          <p>Far far away, behind the word mountains, far countries vokalia and consonantia.</p>
+          <a href="#" class="Button Button--firstAlt text-uppercase">Yo quiero</a>
+        </div>
+      </div>
+    </div>
+    <aside class="Carousel__down">
+      <button class="Button js-move-scroll" data-href="#home-spa"><i class="icon-keyboard_arrow_down"></i></button>
+    </aside>
+  </div>
+
+  <section class="Page" id="home-spa">
     <div class="container">
       <h3 class="Page__subtitle text-center text-uppercase">Home Spa</h3>
       <h2 class="Page__title text-center">La esencia de estar bien</h2>
@@ -76,7 +96,7 @@
     </div>
   </section>
 
-  <section class="Page">
+  <section class="Page" id="como-funciona">
     <div class="container">
       <article class="Page__videoWrapper">
         <figure class="Page__video embed-responsive embed-responsive-16by9">
@@ -102,7 +122,7 @@
     </div>
   </section>
 
-  <section class="Page Page__register">
+  <section class="Page Page--noPadding Page__register" id="iniciar-sesion">
     <figure class="Page__bgRegister">
       <h3 class="Page__bgRegister__title text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur.</h3>
       <h4 class="Page__bgRegister__subtitle text-white text-uppercase">Regístrate es gratis.</h4>
@@ -126,7 +146,7 @@
     </article>
   </section>
 
-  <section class="Page">
+  <!-- <section class="Page" id="servicios">
     <div class="container">
       <div class="row">
         <div class="col-lg-3">
@@ -182,6 +202,84 @@
         </div>
       </div>
     </div>
+  </section> -->
+
+  <section class="Page" id="servicios">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-5">
+          <h3 class="Page__subtitle text-center text-uppercase">Servicios y promociones</h3>
+          <nav class="Navigation Navigation--radius">
+            <ul class="Navigation__list">
+              <li class="active"><button type="button">Engriete</button></li>
+              <li><button type="button">Paquetes</button></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3">
+          <h2 class="Page__service__title"><span>2.</span> ¿Qué corte o peinado deseas?</h2>
+          <p>A wonderful serenity has taken posse ssion of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+        </div>
+        <div class="col-lg-9">
+          <section class="Cards Cards--33">
+            <article class="Card__item active">
+              <figure class="Card__figure">
+                <img src="images/corte.jpg" alt="Corte" class="img-fluid" />
+                <aside class="Card__point"></aside>
+                <h3 class="Card__title text-uppercase text-white">Corte</h3>
+              </figure>
+            </article>
+
+            <article class="Card__item">
+              <figure class="Card__figure">
+                <img src="images/corte.jpg" alt="Corte" class="img-fluid" />
+                <aside class="Card__point"></aside>
+                <h3 class="Card__title text-uppercase text-white">Planchado</h3>
+              </figure>
+            </article>
+
+            <article class="Card__item">
+              <figure class="Card__figure">
+                <img src="images/corte.jpg" alt="Corte" class="img-fluid" />
+                <aside class="Card__point"></aside>
+                <h3 class="Card__title text-uppercase text-white">Cepillado</h3>
+              </figure>
+            </article>
+
+            <article class="Card__item">
+              <figure class="Card__figure">
+                <img src="images/corte.jpg" alt="Corte" class="img-fluid" />
+                <aside class="Card__point"></aside>
+                <h3 class="Card__title text-uppercase text-white">Peinados</h3>
+              </figure>
+            </article>
+
+            <article class="Card__item">
+              <figure class="Card__figure">
+                <img src="images/corte.jpg" alt="Corte" class="img-fluid" />
+                <aside class="Card__point"></aside>
+                <h3 class="Card__title text-uppercase text-white">Trenzas</h3>
+              </figure>
+            </article>
+
+            <article class="Card__item">
+              <figure class="Card__figure">
+                <img src="images/corte.jpg" alt="Corte" class="img-fluid" />
+                <aside class="Card__point"></aside>
+                <h3 class="Card__title text-uppercase text-white">Tratamientos</h3>
+              </figure>
+            </article>
+          </section>
+
+          <nav class="Card__nav">
+            <button class="Card__navButton Card__navButton--left"><i class="icon-keyboard_arrow_left"></i> Regresar</button>
+            <button class="Card__navButton Card__navButton--right">Siguiente <i class="icon-keyboard_arrow_right"></i></button>
+          </nav>
+        </div>
+      </div>
+    </div>
   </section>
 
   <aside class="Prefooter">
@@ -193,12 +291,13 @@
       </div>
     </div>
   </aside>
+
   <footer class="Footer">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-3">
           <h2 class="Footer__logo">
-            <img src="images/logo-white.png" alt="Essenza Home Spa" class="img-fluid" />
+            <a href="index.html" class="d-block"><img src="images/logo-white.png" alt="Essenza Home Spa" class="img-fluid" /></a>
           </h2>
         </div>
         <div class="col-lg-9">
@@ -217,6 +316,6 @@
   </footer>
 
   <script type="text/javascript" src="js/min/bundle.js"></script>
-  <script type="text/javascript" src="js/youtube.js"></script>
+  <script type="text/javascript" src="js/min/script.js"></script>
 </body>
 </html>

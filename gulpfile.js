@@ -58,12 +58,12 @@ gulp.task('css', () => {
 
 gulp.task('concat', () => {
   return gulp.src([
-    config.jsDir + '/youtube.js'
-    //config.jsDir + '/main.js',
+    config.jsDir + '/youtube.js',
+    config.jsDir + '/main.js'
   ])
   .pipe(sourcemaps.init())
   .pipe(babel({
-    presets: ['env']
+    presets: ['@babel/env']
   }))
   .pipe(concat('script.js'))
   .pipe(sourcemaps.write('.'))

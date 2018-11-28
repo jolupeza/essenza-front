@@ -1,0 +1,87 @@
+.Cards {
+  display: flex;
+  justify-content: space-between;
+  &--33 {
+    flex-wrap: wrap;
+    .Card__item {
+      width: 32%
+    }
+  }
+}
+.Card__item {
+  border: 5px solid white;
+  background-color: black;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  position: relative;
+  transition: border-color .3s ease;
+  img {
+    opacity: .7;
+  }
+  &.active, &:hover {
+    border-color: $firstColor;
+    .Card__point {
+      background-color: $firstColor;
+    }
+    .Card__title {
+      &::after {
+        background-color: $firstColor;
+      }
+    }
+  }
+}
+.Card__figure {
+  margin-bottom: 0;
+}
+.Card__title {
+  bottom: 0;
+  margin-bottom: 0;
+  padding: 1rem;
+  position: absolute;
+  &::after {
+    background-color: white;
+    content: "";
+    display: block;
+    height: 3px;
+    width: 30px;
+  }
+}
+.Card__point {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: inline-block;
+  height: 25px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 25px;
+}
+.Card__nav {
+  display: flex;
+  justify-content: space-between;
+}
+.Card__navButton {
+  align-items: center;
+  background-color: $grayColor;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  text-transform: uppercase;
+  transition: background-color .2s ease-out, color .3s ease;
+  [class^=icon-] {
+    font-size: 1.5em;
+  }
+  &--left {
+    border-radius: 0 1.5rem 1.5rem 0;
+    padding: .5rem 1.5rem .5rem 1rem;
+  }
+  &--right {
+    border-radius: 1.5rem 0 0 1.5rem;
+    padding: .5rem 1rem .5rem 1.5rem;
+  }
+  &:focus, &:hover {
+    background-color: $firstColor;
+    color: white;
+  }
+}

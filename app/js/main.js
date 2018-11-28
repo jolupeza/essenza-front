@@ -1,14 +1,25 @@
-"use strict";
+// "use strict";
 
-// ;(function($) {
-  // let $window = $(window)
+;(function($) {
+  let $window = $(window);
 
-  // $(function () {
-  //   $window.on('scroll', function() {
-  //   });
+  $(function () {
+    $window.on('scroll', function() {
+      checkScrollHeader();
+    });
 
   //   $window.on('resize', function () {
   //   });
+
+    $('.js-move-scroll').on('click', function (ev) {
+      ev.preventDefault();
+
+      let dest = $(this).data('href');
+
+      moveScroll(dest);
+    });
+
+    checkScrollHeader();
 
   //   $('.ArrowTop').on('click', (ev) => {
   //     ev.preventDefault();
@@ -17,15 +28,34 @@
   //       scrollTop: 0
   //     }, 800);
   //   });
-  // });
+  });
 
-  let hViewport = () => {
-    return Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  let moveScroll = (dest) => {
+    $('html, body').stop().animate({
+      scrollTop: $(dest).offset().top
+    }, 800);
   }
 
-  let wViewport = () => {
-    return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  let checkScrollHeader = () => {
+    let minScroll = 50,
+        header = document.querySelector('.Header');
+
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > minScroll) {
+      header.classList.add('Header--scroll');
+    } else {
+      header.classList.remove('Header--scroll');
+    }
   }
+
+  // let hViewport = () => {
+  //   return Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  // }
+
+  // let wViewport = () => {
+  //   return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  // }
 
   // let getHHeader = () => {
   //   return parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--height-header'));
@@ -36,4 +66,4 @@
 
   //   document.documentElement.style.setProperty('--height-header', `${hHeader}px`);
   // }
-// })(jQuery);
+})(jQuery);

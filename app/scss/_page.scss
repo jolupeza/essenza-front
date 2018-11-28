@@ -1,5 +1,8 @@
 .Page {
   padding: 6rem 0;
+  &--noPadding {
+    padding: 0;
+  }
   &--full {
     min-height: 100vh;
   }

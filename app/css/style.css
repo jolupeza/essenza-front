@@ -9921,8 +9921,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("./../fonts/icomoon.eot?89h1m1");
-  src: url("./../fonts/icomoon.eot?89h1m1#iefix") format("embedded-opentype"), url("./../fonts/icomoon.ttf?89h1m1") format("truetype"), url("./../fonts/icomoon.woff?89h1m1") format("woff"), url("./../fonts/icomoon.svg?89h1m1#icomoon") format("svg");
+  src: url("./../fonts/icomoon.eot?65vocx");
+  src: url("./../fonts/icomoon.eot?65vocx#iefix") format("embedded-opentype"), url("./../fonts/icomoon.ttf?65vocx") format("truetype"), url("./../fonts/icomoon.woff?65vocx") format("woff"), url("./../fonts/icomoon.svg?65vocx#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -9939,6 +9939,39 @@ a.text-dark:hover, a.text-dark:focus {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-keyboard_arrow_up:before {
+  content: "\e904"; }
+
+.icon-keyboard_arrow_right:before {
+  content: "\e905"; }
+
+.icon-keyboard_arrow_left:before {
+  content: "\e906"; }
+
+.icon-keyboard_arrow_down:before {
+  content: "\e907"; }
+
+.icon-arrow_upward:before {
+  content: "\e908"; }
+
+.icon-arrow_forward:before {
+  content: "\e909"; }
+
+.icon-arrow_drop_up:before {
+  content: "\e90a"; }
+
+.icon-arrow_drop_down:before {
+  content: "\e90b"; }
+
+.icon-arrow_downward:before {
+  content: "\e90c"; }
+
+.icon-arrow_back:before {
+  content: "\e90d"; }
+
+.icon-spinner:before {
+  content: "\e90e"; }
+
 .icon-user:before {
   content: "\e900"; }
 
@@ -9953,7 +9986,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 body {
   background-color: #ffffff;
-  border-top: 8px solid #69cebd;
   color: #5f5f5f;
   font-family: "Panton-Regular", sans-serif;
   font-size: 16px;
@@ -10025,6 +10057,8 @@ hr {
 
 .Page {
   padding: 6rem 0; }
+  .Page--noPadding {
+    padding: 0; }
   .Page--full {
     min-height: 100vh; }
 
@@ -10110,9 +10144,20 @@ hr {
     font-family: "Panton-Bold", sans-serif; }
 
 .Header {
+  border-top: 8px solid #69cebd;
   padding: 2rem 0;
-  position: absolute;
-  width: 100%; }
+  position: fixed;
+  top: 0;
+  -webkit-transition: background-color .2s ease, padding .3s ease-out;
+  transition: background-color .2s ease, padding .3s ease-out;
+  width: 100%;
+  z-index: 9; }
+  .Header--scroll {
+    background-color: white;
+    padding: 1rem 0; }
+
+.Header__logo {
+  margin-bottom: 0; }
 
 .Header__nav {
   display: -webkit-box;
@@ -10138,7 +10183,7 @@ hr {
       background-color: #66b9ab; }
     .Header__mainMenu li a {
       color: #303030; }
-      .Header__mainMenu li a:focus::after, .Header__mainMenu li a:hover::after {
+      .Header__mainMenu li a:focus::after, .Header__mainMenu li a:hover::after, .Header__mainMenu li a.active::after {
         background-color: #66b9ab; }
       .Header__mainMenu li a::after {
         background-color: transparent;
@@ -10194,6 +10239,57 @@ hr {
 .Prefooter {
   background-color: #66b9ab;
   padding: 2rem 0; }
+
+.Carousel {
+  min-height: 100vh; }
+  .Carousel--home {
+    background: transparent url("./../images/bg-sliders.jpg") 0 0 no-repeat;
+    background-size: cover; }
+    .Carousel--home .carousel-inner, .Carousel--home .carousel-item {
+      min-height: 100vh; }
+    .Carousel--home .carousel-item {
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 0 5%; }
+    .Carousel--home .carousel-caption {
+      bottom: auto;
+      left: 50%;
+      padding: 0;
+      right: auto;
+      text-align: left;
+      top: 40%;
+      width: 30%; }
+      .Carousel--home .carousel-caption h5 {
+        color: #1c1c1c;
+        font-family: "Panton-ExtraLight", sans-serif;
+        font-size: 4rem;
+        line-height: 1.1;
+        margin-bottom: 1.5rem; }
+        .Carousel--home .carousel-caption h5::after {
+          background-color: #fd4c59;
+          content: "";
+          display: block;
+          height: 3px;
+          width: 25%; }
+      .Carousel--home .carousel-caption p {
+        color: #1c1c1c;
+        font-family: "Panton-ExtraLight", sans-serif;
+        font-size: 1.5rem;
+        line-height: 1.2; }
+    .Carousel--home .Carousel__down {
+      bottom: 0;
+      position: absolute;
+      text-align: center;
+      width: 100%; }
+      .Carousel--home .Carousel__down .Button {
+        background-color: transparent;
+        color: #66b9ab;
+        font-size: 3rem;
+        padding: 0; }
 
 .Box {
   display: -webkit-box;
@@ -10352,5 +10448,94 @@ hr {
   .Service__link:focus, .Service__link:hover {
     background-color: white;
     color: #5f5f5f; }
+
+.Cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .Cards--33 {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .Cards--33 .Card__item {
+      width: 32%; }
+
+.Card__item {
+  border: 5px solid white;
+  background-color: black;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  position: relative;
+  -webkit-transition: border-color .3s ease;
+  transition: border-color .3s ease; }
+  .Card__item img {
+    opacity: .7; }
+  .Card__item.active, .Card__item:hover {
+    border-color: #66b9ab; }
+    .Card__item.active .Card__point, .Card__item:hover .Card__point {
+      background-color: #66b9ab; }
+    .Card__item.active .Card__title::after, .Card__item:hover .Card__title::after {
+      background-color: #66b9ab; }
+
+.Card__figure {
+  margin-bottom: 0; }
+
+.Card__title {
+  bottom: 0;
+  margin-bottom: 0;
+  padding: 1rem;
+  position: absolute; }
+  .Card__title::after {
+    background-color: white;
+    content: "";
+    display: block;
+    height: 3px;
+    width: 30px; }
+
+.Card__point {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: inline-block;
+  height: 25px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 25px; }
+
+.Card__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.Card__navButton {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-transform: uppercase;
+  -webkit-transition: background-color .2s ease-out, color .3s ease;
+  transition: background-color .2s ease-out, color .3s ease; }
+  .Card__navButton [class^=icon-] {
+    font-size: 1.5em; }
+  .Card__navButton--left {
+    border-radius: 0 1.5rem 1.5rem 0;
+    padding: .5rem 1.5rem .5rem 1rem; }
+  .Card__navButton--right {
+    border-radius: 1.5rem 0 0 1.5rem;
+    padding: .5rem 1rem .5rem 1.5rem; }
+  .Card__navButton:focus, .Card__navButton:hover {
+    background-color: #66b9ab;
+    color: white; }
 
 /*# sourceMappingURL=maps/style.css.map */

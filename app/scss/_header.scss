@@ -1,7 +1,18 @@
 .Header {
+  border-top: 8px solid $thirdColor;
   padding: 2rem 0;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  transition: background-color .2s ease, padding .3s ease-out;
   width: 100%;
+  z-index: 9;
+  &--scroll {
+    background-color: white;
+    padding: 1rem 0;
+  }
+}
+.Header__logo {
+  margin-bottom: 0;
 }
 .Header__nav {
   display: flex;
@@ -26,7 +37,7 @@
     }
     a {
       color: $headingColor;
-      &:focus, &:hover {
+      &:focus, &:hover, &.active {
         &::after {
           background-color: $firstColor;
         }

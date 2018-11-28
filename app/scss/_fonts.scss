@@ -36,11 +36,11 @@
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('./../fonts/icomoon.eot?89h1m1');
-  src:  url('./../fonts/icomoon.eot?89h1m1#iefix') format('embedded-opentype'),
-    url('./../fonts/icomoon.ttf?89h1m1') format('truetype'),
-    url('./../fonts/icomoon.woff?89h1m1') format('woff'),
-    url('./../fonts/icomoon.svg?89h1m1#icomoon') format('svg');
+  src:  url('./../fonts/icomoon.eot?65vocx');
+  src:  url('./../fonts/icomoon.eot?65vocx#iefix') format('embedded-opentype'),
+    url('./../fonts/icomoon.ttf?65vocx') format('truetype'),
+    url('./../fonts/icomoon.woff?65vocx') format('woff'),
+    url('./../fonts/icomoon.svg?65vocx#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -60,6 +60,39 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-keyboard_arrow_up:before {
+  content: "\e904";
+}
+.icon-keyboard_arrow_right:before {
+  content: "\e905";
+}
+.icon-keyboard_arrow_left:before {
+  content: "\e906";
+}
+.icon-keyboard_arrow_down:before {
+  content: "\e907";
+}
+.icon-arrow_upward:before {
+  content: "\e908";
+}
+.icon-arrow_forward:before {
+  content: "\e909";
+}
+.icon-arrow_drop_up:before {
+  content: "\e90a";
+}
+.icon-arrow_drop_down:before {
+  content: "\e90b";
+}
+.icon-arrow_downward:before {
+  content: "\e90c";
+}
+.icon-arrow_back:before {
+  content: "\e90d";
+}
+.icon-spinner:before {
+  content: "\e90e";
+}
 .icon-user:before {
   content: "\e900";
 }
