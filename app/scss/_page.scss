@@ -1,3 +1,21 @@
+.Page__wrapper {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  width: 100%;
+  .Page {
+    display: inline-block;
+    transition: margin-left .3s ease-out;
+    white-space: normal;
+    width: 100%;
+    * {
+      white-space: normal;
+    }
+    &.hide {
+      margin-left: -100%;
+    }
+  }
+}
 .Page {
   padding: 6rem 0;
   &--noPadding {

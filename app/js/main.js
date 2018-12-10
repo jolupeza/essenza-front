@@ -19,6 +19,20 @@
       moveScroll(dest);
     });
 
+    $('.Service__link').on('click', function (ev) {
+      let parent = $('#servicios'),
+          parentSubcategory = $('#servicios-subcategories');
+
+      parent.addClass('hide');
+    });
+
+    $('.Service__return').on('click', function (ev) {
+      let parent = $('#servicios'),
+          parentSubcategory = $('#servicios-subcategories');
+
+      parent.removeClass('hide');
+    });
+
     checkScrollHeader();
 
   //   $('.ArrowTop').on('click', (ev) => {

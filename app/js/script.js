@@ -86,6 +86,16 @@ function resizeVideo(width, height) {
       var dest = $(this).data('href');
       moveScroll(dest);
     });
+    $('.Service__link').on('click', function (ev) {
+      var parent = $('#servicios'),
+          parentSubcategory = $('#servicios-subcategories');
+      parent.addClass('hide');
+    });
+    $('.Service__return').on('click', function (ev) {
+      var parent = $('#servicios'),
+          parentSubcategory = $('#servicios-subcategories');
+      parent.removeClass('hide');
+    });
     checkScrollHeader(); //   $('.ArrowTop').on('click', (ev) => {
     //     ev.preventDefault();
     //     $('html, body').animate({
